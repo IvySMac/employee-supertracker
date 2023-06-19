@@ -16,7 +16,7 @@ async function main() {
     {
         type: "list",
         name: "menuOption",
-        choices: ["Get All Departments", "Create a Department"],
+        choices: ["Get All Departments", "Create A Department"],
     },
    ]);
 
