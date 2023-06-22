@@ -167,15 +167,13 @@ async function main() {
       const employeeFirstName = newEmployee.employeeFirstName;
       const employeeLastName = newEmployee.employeeLastName;
       const employeeRole = newEmployee.employeeRole;
-      const managerStatus=newEmployee.managerStatus;
-      const managerId=newEmployee.managerId;
+      const managerStatus = newEmployee.managerStatus;
+      const managerId = newEmployee.managerId;
 
       await connection.query(
         `INSERT INTO employees (first_name, last_name, role_id, managerStatus, managerId) VALUES ('${employeeFirstName}', '${employeeLastName}', '${employeeRole}', '${managerStatus}','${managerId}');`
       );
-      const [updated] = await connection.query(
-        "SELECT * FROM employees;"
-      );
+      const [updated] = await connection.query("SELECT * FROM employees;");
 
       console.table(updated);
     } catch (err) {
@@ -185,13 +183,3 @@ async function main() {
 }
 main();
 
-//    console.log(selectedOption);
-
-//    const [departments] = await connection.execute('SELECT * FROM departments;',[]);
-//    console.table(departments);
-
-//    const [roles] =await connection.execute('SELECT * FROM roles JOIN departments ON roles.departments_id = departments.id;', []);
-//    console.table(roles);
-
-//    const [employees] =await connection.execute('SELECT * FROM employees JOIN roles ON employees.role_id = roles.id JOIN departments ON roles.departments_id = departments.id;', []);
-//    console.table(employees);
