@@ -10,32 +10,37 @@ To use this app, start by opening up your terminal and typing 'node app'
 
 A list of prompts will be shown, ranging from simply viewing to adding/updating departments, roles and employees. Click any of the prompts to explore the app.
 
-To see this app in action, check out the video <a href="https://drive.google.com/file/d/1wnMT9rAPqfJSkP4DDA1FurF67VUbHrmk/view">here</a>!
+To see this app in action, check out the video <a href="https://drive.google.com/file/d/1uogjcCd8bRAOnEGIzKW3dZaHT6zSgpqK/view">here</a>!
 
 ## User Story
 
 ```
-AS a freelance web developer
-I WANT to generate a simple logo for my projects
-SO THAT I don't have to pay a graphic designer
+AS A business owner
+I WANT to be able to view and manage the departments, roles, and employees in my company
+SO THAT I can organize and plan my business
+
 ```
 
 ## Acceptance Criteria
 
 ```
 GIVEN a command-line application that accepts user input
-WHEN I am prompted for text
-THEN I can enter up to three characters
-WHEN I am prompted for the text color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I am prompted for a shape
-THEN I am presented with a list of shapes to choose from: circle, triangle, and square
-WHEN I am prompted for the shape's color
-THEN I can enter a color keyword (OR a hexadecimal number)
-WHEN I have entered input for all the prompts
-THEN an SVG file is created named `logo.svg`
-AND the output text "Generated logo.svg" is printed in the command line
-WHEN I open the `logo.svg` file in a browser
-THEN I am shown a 300x200 pixel image that matches the criteria I entered
+WHEN I start the application
+THEN I am presented with the following options: view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role
+WHEN I choose to view all departments
+THEN I am presented with a formatted table showing department names and department ids
+WHEN I choose to view all roles
+THEN I am presented with the job title, role id, the department that role belongs to, and the salary for that role
+WHEN I choose to view all employees
+THEN I am presented with a formatted table showing employee data, including employee ids, first names, last names, job titles, departments, salaries, and managers that the employees report to
+WHEN I choose to add a department
+THEN I am prompted to enter the name of the department and that department is added to the database
+WHEN I choose to add a role
+THEN I am prompted to enter the name, salary, and department for the role and that role is added to the database
+WHEN I choose to add an employee
+THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database
+WHEN I choose to update an employee role
+THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
+
 ```
 
